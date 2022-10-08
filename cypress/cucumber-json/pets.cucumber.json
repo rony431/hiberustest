@@ -1,0 +1,42 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Testing pet swagger",
+    "line": 1,
+    "id": "testing-pet-swagger",
+    "tags": [],
+    "uri": "pets.feature",
+    "elements": [
+      {
+        "id": "testing-pet-swagger;verify-pet-swagger-to-create-user",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Verify pet swagger to create user",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "Create new user",
+            "result": {
+              "status": "passed",
+              "duration": 265000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 4,
+            "name": "validate the user created",
+            "result": {
+              "status": "passed",
+              "duration": 116000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

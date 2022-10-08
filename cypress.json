@@ -1,0 +1,12 @@
+{
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": ["*.ts", "*.md"],
+  "viewportWidth": 1400,
+  "viewportHeight": 1000,
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 100000,
+  "chromeWebSecurity": false, 
+  "modifyObstructiveCode":false,
+  "retries": 2,
+  "failOnStatusCode": false
+} 
