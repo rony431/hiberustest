@@ -1,23 +1,30 @@
 require('cypress-plugin-tab');
 import {When, Given, Then, And } from "cypress-cucumber-preprocessor/steps";
+import petData from "./petData";
+import petUpdate from "./petUpdate";
 
-const bodyUser = {
-  id: 1,
-  username: 'testHiberus',
-  firstName: `firstName`,
-  lastName: `lastname`,
-  email: `testhiberus@email.com`,
-  password: '12345',
-  phone: '12345',
-  userStatus: 1,
-};
-Given('Create new user', () => {
-    cy.request('POST', 'https://petstore.swagger.io/v2/user', bodyUser).then((response) => {
+Given('Create new pet', () => {
+    cy.request('POST', 'https://petstore.swagger.io/v2/pet', petData).then((response) => {
         expect(response.status).to.equal(200);
       });
   })
-Then('validate the user created', () => {
-    cy.request('GET', 'https://petstore.swagger.io/v2/user/test', bodyUser).then((response) => {
+When('find a pet by status', () => {
+    cy.request('GET', 'https://petstore.swagger.io/v2/pet/findByStatus?status=available').then((response) => {
         expect(response.status).to.equal(200);
       });
+})
+When('find a pet by id', () => {
+  cy.request('GET', 'https://petstore.swagger.io/v2/pet/9981').then((response) => {
+      expect(response.status).to.equal(200);
+    });
+})
+And('pet is updated', () => {
+  cy.request('POST', 'https://petstore.swagger.io/v2/pet/', petUpdate).then((response) => {
+      expect(response.status).to.equal(200);
+    });
+})
+Then('pet is deleted', () => {
+  cy.request('DELETE', 'https://petstore.swagger.io/v2/pet/9981').then((response) => {
+      expect(response.status).to.equal(200);
+    });
 })

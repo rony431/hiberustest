@@ -1,17 +1,17 @@
 [
   {
     "keyword": "Feature",
-    "name": "Testing pet swagger",
+    "name": "Testing pet API",
     "line": 1,
-    "id": "testing-pet-swagger",
+    "id": "testing-pet-api",
     "tags": [],
     "uri": "pets.feature",
     "elements": [
       {
-        "id": "testing-pet-swagger;verify-pet-swagger-to-create-user",
+        "id": "testing-pet-api;verify-pet-swagger",
         "keyword": "Scenario",
         "line": 2,
-        "name": "Verify pet swagger to create user",
+        "name": "Verify pet swagger",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -19,20 +19,50 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 3,
-            "name": "Create new user",
+            "name": "Create new pet",
             "result": {
               "status": "passed",
-              "duration": 265000000
+              "duration": 638000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "find a pet by status",
+            "result": {
+              "status": "passed",
+              "duration": 194000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "find a pet by id",
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "pet is updated",
+            "result": {
+              "status": "passed",
+              "duration": 100000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 4,
-            "name": "validate the user created",
+            "line": 7,
+            "name": "pet is deleted",
             "result": {
               "status": "passed",
-              "duration": 116000000
+              "duration": 90000000
             }
           }
         ]

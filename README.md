@@ -14,13 +14,17 @@ node Version used 14
 
 ## Usage
 
-```Execution you can run on Chrome or Firefox
-npm run testChrome
-npm run testFirefox
-npm run testReport // this will generate the report with results
+```Execution you can run on headless
+npm run apiPet 
+in order to see report use
+node ./cypress/reportGenerator.js
 
 ## Challenges 2
-The is a file for API testing
-when you run any command
-npm run testChrome it will run all test suite
+You can ramp the number of VUs up and down during the test. To configure ramping, use the options.stages property.
+
+
+Using Mac locally
+brew install k6
+$ k6 run script.js
+k6 run k6.js
 
